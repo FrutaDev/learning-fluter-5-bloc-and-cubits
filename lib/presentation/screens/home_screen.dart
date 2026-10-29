@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hola Home Screen"),
+        title: const Text("Home Screen"),
       ),
       body: ListView(
         children: [
@@ -28,7 +28,13 @@ class HomeScreen extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Divider(),
-          )
+          ),
+          ListTile(
+            title: const Text("Register"),
+            subtitle: const Text("User Register"),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () => context.push("/register"),
+          ),
         ],
       ),
     );
